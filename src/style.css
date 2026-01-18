@@ -275,6 +275,136 @@ body {
   animation: scribble-in 0.6s ease-out 0.6s forwards;
 }
 
+/* Ticker */
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  background: var(--ink-color);
+  color: var(--highlight-color);
+  padding: 0.5rem 0;
+  border-bottom: 2px solid var(--ink-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transform: rotate(-0.5deg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ticker {
+  display: flex;
+  white-space: nowrap;
+  animation: ticker 20s linear infinite;
+}
+
+.ticker-item {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  padding-right: 2rem;
+  animation: jitter 0.3s infinite;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes jitter {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(1px, 1px);
+  }
+
+  50% {
+    transform: translate(-1px, 0);
+  }
+
+  75% {
+    transform: translate(0, -1px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Meme Gallery */
+.meme-gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  margin-bottom: 3rem;
+  /* "space under" */
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.meme-gallery::-webkit-scrollbar {
+  display: none;
+  /* Chrome/Safari/Opera */
+}
+
+.meme-frame {
+  background: white;
+  padding: 10px 10px 25px 10px;
+  /* Polaroid bottom padding */
+  border: 1px solid #ddd;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, z-index 0s;
+  max-width: 320px;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.meme-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Grayscale or sepia for meme feel? optional */
+  filter: contrast(1.1);
+}
+
+.meme-frame:hover {
+  transform: scale(1.1) rotate(0deg) !important;
+  z-index: 10;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+.rot-1 {
+  transform: rotate(-3deg);
+}
+
+.rot-2 {
+  transform: rotate(2deg);
+}
+
+.rot-3 {
+  transform: rotate(-1.5deg);
+}
+
+.rot-4 {
+  transform: rotate(4deg);
+}
+
+
+/* Ensure animations trigger for new elements */
+.meme-gallery {
+  opacity: 0;
+  animation: scribble-in 0.6s ease-out 0.5s forwards;
+}
+
 .wallet-section {
   opacity: 0;
   animation: scribble-in 0.6s ease-out 0.9s forwards;

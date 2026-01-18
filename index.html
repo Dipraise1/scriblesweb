@@ -1,74 +1,109 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scribbles Solana</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Gloria+Hallelujah&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="app">
-      <main class="container">
-        <header class="hero">
-          <h1 class="scribble-text title">Scribbles</h1>
-          <p class="subtitle">on Solana</p>
-        </header>
 
-        <section class="mascot-section">
-          <!-- Placeholder for the image. Assuming JdPPfP5S_400x400.jpg is the mascot/logo -->
-          <div class="frame">
-             <img src="/JdPPfP5S_400x400.jpg" alt="Scribbles Mascot" class="mascot-img" />
-          </div>
-        </section>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scribbles Solana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Gloria+Hallelujah&display=swap"
+    rel="stylesheet">
+</head>
 
-        <section class="links">
-          <a href="https://x.com/scribble_solana" target="_blank" class="scribble-btn social-btn x-btn" aria-label="X (Twitter)">
-            <!-- X Icon (Scribble Style) -->
-            <svg viewBox="0 0 24 24" fill="none" class="icon">
-              <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>X / Twitter</span>
-          </a>
-
-          <a href="https://t.me/scribblesolana" target="_blank" class="scribble-btn social-btn tg-btn" aria-label="Telegram">
-            <!-- Telegram Icon (Scribble Style) -->
-            <svg viewBox="0 0 24 24" fill="none" class="icon">
-              <!-- Paper plane ish -->
-              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>Telegram</span>
-          </a>
-
-          <a href="#" class="scribble-btn social-btn dex-btn" aria-label="DexScreener">
-            <!-- Chart/Dex Icon -->
-            <svg viewBox="0 0 24 24" fill="none" class="icon">
-              <path d="M3 20h18M5 16l4-8 5 5 4-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>DexScreener</span>
-          </a>
-        </section>
-
-        <section class="wallet-section">
-          <div class="wallet-box" id="wallet-box">
-            <span class="label">Ca:</span>
-            <code id="wallet-address">SOL...ADDRESS</code>
-            <button id="copy-btn" class="copy-btn" title="Copy Address">
-              <svg viewBox="0 0 24 24" fill="none" class="icon-small">
-                 <path d="M8 4v12a2 2 0 002 2h8a2 2 0 002-2V7.273M8 4a2 2 0 00-2 2v2m2-4h8.455M16 4v3.273h3.273M20 7.273V18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-          </div>
-          <div id="copy-feedback" class="feedback hidden">Copied!</div>
-        </section>
-
-      </main>
+<body>
+  <div id="app">
+    <div class="ticker-wrap">
+      <div class="ticker">
+        <div class="ticker-item">$SCRIBBLING • $SCRIBBLING • $SCRIBBLING • $SCRIBBLING • $SCRIBBLING • $SCRIBBLING •
+        </div>
+        <div class="ticker-item">$SCRIBBLING • $SCRIBBLING • $SCRIBBLING • $SCRIBBLING • $SCRIBBLING • $SCRIBBLING •
+        </div>
+      </div>
     </div>
-    <script type="module" src="/src/main.ts"></script>
-    <script>
-      // Simple inline check to ensure fonts are loaded or fallback
-    </script>
-  </body>
+
+    <main class="container">
+      <header class="hero">
+        <h1 class="scribble-text title">Scribbles</h1>
+        <p class="subtitle">on Solana</p>
+      </header>
+
+      <section class="mascot-section">
+        <!-- Placeholder for the image. Assuming JdPPfP5S_400x400.jpg is the mascot/logo -->
+        <div class="frame">
+          <img src="/JdPPfP5S_400x400.jpg" alt="Scribbles Mascot" class="mascot-img" />
+        </div>
+      </section>
+
+      <section class="meme-gallery">
+        <div class="meme-frame rot-1">
+          <img src="/meme-1.jpg" alt="Meme 1" />
+        </div>
+        <div class="meme-frame rot-2">
+          <img src="/meme-2.jpg" alt="Meme 2" />
+        </div>
+        <div class="meme-frame rot-3">
+          <img src="/meme-3.jpg" alt="Meme 3" />
+        </div>
+        <div class="meme-frame rot-4">
+          <img src="/meme-4.jpg" alt="Meme 4" />
+        </div>
+      </section>
+
+      <section class="links">
+        <a href="https://x.com/scribble_solana" target="_blank" class="scribble-btn social-btn x-btn"
+          aria-label="X (Twitter)">
+          <!-- X Icon (Scribble Style) -->
+          <svg viewBox="0 0 24 24" fill="none" class="icon">
+            <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          <span>X / Twitter</span>
+        </a>
+
+        <a href="https://t.me/scribblesolana" target="_blank" class="scribble-btn social-btn tg-btn"
+          aria-label="Telegram">
+          <!-- Telegram Icon (Scribble Style) -->
+          <svg viewBox="0 0 24 24" fill="none" class="icon">
+            <!-- Paper plane ish -->
+            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span>Telegram</span>
+        </a>
+
+        <a href="#" class="scribble-btn social-btn dex-btn" aria-label="DexScreener">
+          <!-- Chart/Dex Icon -->
+          <svg viewBox="0 0 24 24" fill="none" class="icon">
+            <path d="M3 20h18M5 16l4-8 5 5 4-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          <span>DexScreener</span>
+        </a>
+      </section>
+
+      <section class="wallet-section">
+        <div class="wallet-box" id="wallet-box">
+          <span class="label">Ca:</span>
+          <code id="wallet-address">SOL...ADDRESS</code>
+          <button id="copy-btn" class="copy-btn" title="Copy Address">
+            <svg viewBox="0 0 24 24" fill="none" class="icon-small">
+              <path
+                d="M8 4v12a2 2 0 002 2h8a2 2 0 002-2V7.273M8 4a2 2 0 00-2 2v2m2-4h8.455M16 4v3.273h3.273M20 7.273V18"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+        <div id="copy-feedback" class="feedback hidden">Copied!</div>
+      </section>
+
+    </main>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+  <script>
+    // Simple inline check to ensure fonts are loaded or fallback
+  </script>
+</body>
+
 </html>
