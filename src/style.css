@@ -340,62 +340,105 @@ body {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  gap: 2rem;
-  padding: 2rem;
-  width: 100%;
-  margin-bottom: 3rem;
-  /* "space under" */
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-bottom: 2rem;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  /* Firefox */
+  scroll-snap-type: x mandatory;
+  scroll-padding: 1rem;
+  position: relative;
 }
 
 .meme-gallery::-webkit-scrollbar {
   display: none;
-  /* Chrome/Safari/Opera */
 }
 
 .meme-frame {
   background: white;
-  padding: 10px 10px 25px 10px;
-  /* Polaroid bottom padding */
+  padding: 10px 10px 30px 10px;
   border: 1px solid #ddd;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, z-index 0s;
-  max-width: 320px;
-  position: relative;
-  z-index: 1;
+  max-width: 280px;
   flex-shrink: 0;
+  scroll-snap-align: center;
+  position: relative;
 }
 
 .meme-frame img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
   display: block;
-  /* Grayscale or sepia for meme feel? optional */
-  filter: contrast(1.1);
+  filter: contrast(1.05);
 }
 
 .meme-frame:hover {
-  transform: scale(1.1) rotate(0deg) !important;
+  transform: scale(1.05) rotate(0deg) !important;
   z-index: 10;
-  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-arrow-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+.gallery-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  color: var(--ink-color);
+  background: var(--highlight-color);
+  border: 3px solid var(--ink-color);
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: pulse-arrow 2s infinite ease-in-out;
+  cursor: pointer;
+}
+
+.gallery-arrow svg {
+  width: 30px;
+  height: 30px;
+}
+
+@keyframes pulse-arrow {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1) translateX(5px);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .rot-1 {
-  transform: rotate(-3deg);
+  transform: rotate(-2deg);
 }
 
 .rot-2 {
-  transform: rotate(2deg);
+  transform: rotate(1.5deg);
 }
 
 .rot-3 {
-  transform: rotate(-1.5deg);
+  transform: rotate(-1deg);
 }
 
 .rot-4 {
-  transform: rotate(4deg);
+  transform: rotate(2.5deg);
 }
 
 
